@@ -9,7 +9,7 @@ steps:
         'dockerfile.prod',
         '--platform=linux/amd64',
         '--build-arg',
-        'CONNECTION_STRING=postgresql://orders-db_owner:hpFYvf7c6xRD@ep-dry-sun-a2c8njxz.eu-central-1.aws.neon.tech/orders-db?sslmode=require',
+        'DATABASE_URL=postgresql://orders-db_owner:hpFYvf7c6xRD@ep-dry-sun-a2c8njxz.eu-central-1.aws.neon.tech/orders-db?sslmode=require',
         '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
