@@ -1,0 +1,16 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'europe-southwest1-docker.pkg.dev/microservicios-dev-434019/img-registro-ms/orders-ms',
+        '-f',
+        'dockerfile.prod',
+        '--platform=linux/amd64',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'europe-southwest1-docker.pkg.dev/microservicios-dev-434019/img-registro-ms/orders-ms']
+options:
+  logging: CLOUD_LOGGING_ONLY
