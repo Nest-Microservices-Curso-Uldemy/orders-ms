@@ -16,4 +16,4 @@ availableSecrets:
     - versionName: projects/216401424632/secrets/orders_database_url
       env: 'DATABASE_URL'
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: NONE
