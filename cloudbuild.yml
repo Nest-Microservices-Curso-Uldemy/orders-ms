@@ -1,7 +1,16 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
-      - docker build -t europe-southwest1-docker.pkg.dev/microservicios-dev-434019/img-registro-ms/orders-ms -f dockerfile.prod --platform=linux/amd64 --build-arg ORDERS_DATABASE_URL=$$DATABASE_URL .
+      [
+        'build',
+        '-t',
+        'europe-southwest1-docker.pkg.dev/microservicios-dev-434019/img-registro-ms/orders-ms',
+        '-f',
+        'dockerfile.prod',
+        '--platform=linux/amd64',
+        '--build-arg ORDERS_DATABASE_URL=$$DATABASE_URL'
+        '.',
+      ]
     secretEnv: ['DATABASE_URL']
 
   - name: 'gcr.io/cloud-builders/docker'
