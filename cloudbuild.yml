@@ -1,7 +1,10 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
     args:
       [
+        '-c',
+        'docker',
         'build',
         '-t',
         'europe-southwest1-docker.pkg.dev/microservicios-dev-434019/img-registro-ms/orders-ms',
