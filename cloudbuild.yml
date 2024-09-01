@@ -17,4 +17,4 @@ steps:
 options:
   logging: CLOUD_LOGGING_ONLY
 substitutions:
-  _CONNECTION_STRING: 'postgresql://orders-db_owner:hpFYvf7c6xRD@ep-dry-sun-a2c8njxz.eu-central-1.aws.neon.tech/orders-db?sslmode=require'
+  CONNECTION_STRING: 'postgresql://orders-db_owner:hpFYvf7c6xRD@ep-dry-sun-a2c8njxz.eu-central-1.aws.neon.tech/orders-db?sslmode=require'
